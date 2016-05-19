@@ -36,6 +36,12 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
+" Use old regex engine in newer versions of Vim.
+" The new engine casues severe slowdown, especially in Ruby files.
+if version >= 703
+  set re=1
+end
+
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
