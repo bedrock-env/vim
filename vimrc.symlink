@@ -36,6 +36,8 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
+set clipboard=unnamed
+
 " Use old regex engine in newer versions of Vim.
 " The new engine casues severe slowdown, especially in Ruby files.
 if version >= 703
