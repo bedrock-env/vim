@@ -12,7 +12,7 @@ jgdavey/vim-railscasts
 jgdavey/vim-turbux
 jgdavey/vim-weefactor
 kchmck/vim-coffee-script
-leshill/vim-json
+elzr/vim-json
 mileszs/ack.vim
 pangloss/vim-javascript
 rondale-sc/vim-spacejam
@@ -45,3 +45,8 @@ vim-ruby/vim-ruby
 vim-scripts/bufexplorer.zip
 vim-scripts/bufkill.vim
 wgibbs/vim-irblack
+saltstack/salt-vim
+ekalinin/Dockerfile.vim
+tpope/vim-jdaddy
+elixir-lang/vim-elixir
+avdgaag/vim-phoenix
