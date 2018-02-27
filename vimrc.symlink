@@ -48,6 +48,8 @@ end
 set textwidth=80
 set colorcolumn=+1
 
+set guifont=Input\ Mono:h12
+set linespace=2
 "set guifont=Monaco:h16
 "set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 
