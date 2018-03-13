@@ -50,3 +50,4 @@ ekalinin/Dockerfile.vim
 tpope/vim-jdaddy
 elixir-lang/vim-elixir
 avdgaag/vim-phoenix
+vim-airline/vim-airline
