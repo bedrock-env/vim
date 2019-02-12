@@ -1,6 +1,7 @@
 hashrocket/vim-hashrocket
 AndrewRadev/splitjoin.vim
 adamlowe/vim-slurper
+adelarsq/vim-matchit
 duff/vim-bufonly
 ervandew/supertab
 godlygeek/tabular
