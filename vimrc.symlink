@@ -1,8 +1,8 @@
 if $VIM_PLUGINS != 'NO'
-  runtime! autoload/pathogen.vim
-  if exists('g:loaded_pathogen')
-    execute pathogen#infect('~/.vimbundles/{}', '~/.vim/bundle/{}')
+  if filereadable(expand('~/.vimbundle'))
+    source ~/.vimbundle
   endif
+  runtime! ftplugin/man.vim
 endif
 
 set nocompatible              " be iMproved
@@ -38,19 +38,13 @@ set smarttab
 
 set clipboard=unnamed
 
-" Use old regex engine in newer versions of Vim.
-" The new engine casues severe slowdown, especially in Ruby files.
-if version >= 703
-  set re=1
-end
-
 " Make it obvious where 80 characters is
 set textwidth=80
-set colorcolumn=+1
+set colorcolumn=+1,100
+let &colorcolumn="80,".join(range(101,999),",")
 
-set guifont=Input\ Mono:h12
+"set guifont=Input\ Mono:h12
 set linespace=2
-"set guifont=Monaco:h16
 "set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 
 augroup vimrc
@@ -58,8 +52,9 @@ augroup vimrc
   autocmd GuiEnter * set columns=120 lines=70 number
 augroup END
 
-set antialias
-autocmd QuickFixCmdPost *grep* cwindow
+"set antialias
+" autocmd QuickFixCmdPost *grep* cwindow
+autocmd QuickFixCmdPost *grep* call fugitive#Cwindow()
 
 let g:rails_projections = {
       \ "app/emitters/*_emitter.rb": {"command": "emitter"},
