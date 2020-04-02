@@ -1,7 +1,7 @@
 # vim
 
-vim is an extension for the [bedrock](https://github.com/bedrock-env/ack)
-project to provide vim settings in the bedrock environment.
+vim is an extension for the [Bedrock](https://github.com/bedrock-env/bedrock)
+project to provide vim settings in the Bedrock environment.
 
 ### Provides
 

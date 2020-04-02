@@ -2,12 +2,12 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 
+Plug 'sainnhe/sonokai'
+Plug 'vim-airline/vim-airline'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'adamlowe/vim-slurper'
-Plug 'avdgaag/vim-phoenix'
 Plug 'duff/vim-bufonly'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'elixir-lang/vim-elixir'
 Plug 'ervandew/supertab'
 Plug 'exu/pgsql.vim'
 Plug 'godlygeek/tabular'
@@ -32,13 +32,12 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive', { 'commit': 'de3f6d977c82c5c9ff5f3e0bd9ce3cf86cfda464' }
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-pathogen'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-ragtag'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
@@ -49,9 +48,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-vividchalk'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'vim-scripts/bufkill.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+for f in split(glob('~/.vimbundles/*'), '\n')
+  exe 'source' f
+endfor
 
 call plug#end()

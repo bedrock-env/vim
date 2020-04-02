@@ -5,11 +5,12 @@ if $VIM_PLUGINS != 'NO'
   runtime! ftplugin/man.vim
 endif
 
-set nocompatible              " be iMproved
-
+set nocompatible
 set background=dark
-colorscheme Tomorrow-Night
-
+let g:sonokai_style='andromeda'
+let g:airline_theme='sonokai'
+let g:sonokai_transparent_background=1
+colorscheme sonokaimore
 set laststatus=2
 let g:airline_powerline_fonts=1
 
@@ -32,28 +33,16 @@ set splitright
 set expandtab
 set tabstop=2
 set shiftwidth=2
-
+set linespace=2
 set expandtab
 set smarttab
-
 set clipboard=unnamed
-
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1,100
-let &colorcolumn="80,".join(range(101,999),",")
-
-"set guifont=Input\ Mono:h12
-set linespace=2
-"set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 
 augroup vimrc
   autocmd!
   autocmd GuiEnter * set columns=120 lines=70 number
 augroup END
 
-"set antialias
-" autocmd QuickFixCmdPost *grep* cwindow
 autocmd QuickFixCmdPost *grep* call fugitive#Cwindow()
 
 let g:rails_projections = {
