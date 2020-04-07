@@ -39,6 +39,45 @@
           "operation": "symlink"
         }
       ]
+    },
+    "ubuntu": {
+      "apt": {
+        "install_steps": [
+          {
+            "binary": "apt-get",
+            "command": "install vim -y",
+            "runif": "[ `which vim` != \"/usr/local/bin/vim\" ]"
+          }
+        ],
+        "update_steps": [
+          {
+            "binary": "apt-get",
+            "command": "upgrade vim"
+          }
+        ]
+      },
+      "files": [
+        {
+          "source": "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
+          "target": "$HOME/.vim/autoload/plug.vim",
+          "operation": "remote"
+        },
+        {
+          "source": "colors/sonokaimore.vim",
+          "target": "$HOME/.vim/colors/sonokaimore.vim",
+          "operation": "symlink"
+        },
+        {
+          "source": "vimbundle",
+          "target": "$HOME/.vimbundle",
+          "operation": "symlink"
+        },
+        {
+          "source": "vimrc",
+          "target": "$HOME/.vimrc",
+          "operation": "symlink"
+        }
+      ]
     }
   }
 }
