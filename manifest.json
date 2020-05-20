@@ -9,12 +9,6 @@
             "command": "install vim",
             "runif": "[ `which vim` != \"/usr/local/bin/vim\" ]"
           }
-        ],
-        "update_steps": [
-          {
-            "binary": "brew",
-            "command": "upgrade vim"
-          }
         ]
       },
       "files": [
@@ -47,12 +41,6 @@
             "binary": "apt-get",
             "command": "install vim -y",
             "runif": "[ `which vim` != \"/usr/local/bin/vim\" ]"
-          }
-        ],
-        "update_steps": [
-          {
-            "binary": "apt-get",
-            "command": "upgrade vim"
           }
         ]
       },
